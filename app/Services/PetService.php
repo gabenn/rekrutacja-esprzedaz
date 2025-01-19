@@ -10,8 +10,6 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 class PetService
 {
     /**
-     * Pobiera listę wszystkich zwierząt z ich kategoriami i tagami, z paginacją.
-     *
      * @param int $perPage
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
@@ -21,8 +19,6 @@ class PetService
     }
 
     /**
-     * Tworzy nowe zwierzę i przypisuje tagi (jeśli są podane).
-     *
      * @param array $data
      * @return Pet
      */
@@ -36,8 +32,6 @@ class PetService
     }
 
     /**
-     * Pobiera szczegóły zwierzęcia według ID.
-     *
      * @param int $id
      * @return Pet
      *
@@ -49,8 +43,6 @@ class PetService
     }
 
     /**
-     * Pobiera zwierzeta według statusu.
-     *
      * @param string $status
      * @return \Illuminate\Database\Eloquent\Collection
      */
@@ -60,8 +52,6 @@ class PetService
     }
 
     /**
-     * Aktualizuje dane zwierzęcia i synchronizuje tagi.
-     *
      * @param int $id
      * @param array $data
      * @return Pet
@@ -81,8 +71,6 @@ class PetService
     }
 
     /**
-     * Usuwa zwierzę według ID.
-     *
      * @param int $id
      * @return void
      *

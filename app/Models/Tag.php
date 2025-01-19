@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Tag extends Model
 {
+    public $timestamps = true;
+
     protected $fillable = ['name'];
 
     public function pets(): \Illuminate\Database\Eloquent\Relations\BelongsToMany

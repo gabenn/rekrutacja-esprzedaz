@@ -25,7 +25,7 @@ class UpdatePetRequest extends FormRequest
     protected function prepareForValidation(): void
     {
         $this->merge(['pet' => $this->route('pet')]);
-        //check if photo_urls is a string and convert it to an array
+
         if (is_string($this->photo_urls)) {
             $this->merge(['photo_urls' => explode(',', $this->photo_urls)]);
         }

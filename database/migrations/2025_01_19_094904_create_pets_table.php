@@ -17,9 +17,9 @@ return new class extends Migration
         Schema::create('pets', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->foreignId('category_id')->nullable()->constrained()->onDelete('cascade');
             $table->json('photo_urls');
-            $table->enum('status', [PetStatus::AVAILABLE->value, PetStatus::PENDING->value, PetStatus::SOLD->value]);
+            $table->enum('status', [PetStatus::AVAILABLE->value, PetStatus::PENDING->value, PetStatus::SOLD->value])->nullable();
             $table->timestamps();
         });
     }

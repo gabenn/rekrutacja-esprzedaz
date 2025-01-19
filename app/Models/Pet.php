@@ -18,6 +18,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Pet extends Model
 {
+    public $timestamps = true;
+
     protected $fillable = ['name', 'category_id', 'photo_urls', 'status'];
 
     protected $casts = [
